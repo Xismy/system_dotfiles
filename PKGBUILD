@@ -7,17 +7,67 @@ pkgdesc="Custom set of programs for Arch"
 arch=('any')
 license=('MIT')
 depends=(
+	###base###
 	base
 	base-devel
 	linux
 	linux-firmware
+	linux-headers
 	intel-ucode
+	pacman-contrib
 	refind
+	sudo
+	###network###
 	connman
 	iwd
+	ntp
+	###terminal###
 	zsh
+	zsh-autosuggestions
+	zsh-completions
+	zsh-syntax-highlighting
+	###editor###
+	neovim
+	git
+	###compositor###
+	niri
+	awww
+	qt5-graphicaleffects
+	qt5-wayland
+	qt6-wayland
+	quickshell
+	satty
+	sddm
+	swayidle
+	swaylock
+	swaync
+	###navigation###
+	firefox
+	thunar
+	###pipewire###
+	helvum
+	pavucontrol
+	pipewire
+	pipewire-alsa
+	pipewire-pulse
+	###search###
+	fd
+	fzf
+	jq
+	ripgrep
+	###compression###
+	7zip
+	unrar
+	unzip
+	###fonts###
+	ttf-firacode-nerd
+	###power###
+	cpupower
+	###man###
+	man-db
+	man-pages
 )
 
-package() {
-	mkdir -p "$pkgdir"
+pkgver() {
+	date +"%Y%m%d%H%M%S" 
 }

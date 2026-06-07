@@ -1,0 +1,9 @@
+#!/usr/bin/env zsh
+
+cd /opt/system_dotfiles
+export BUILDDIR=$XDG_CACHE_HOME/arch_meta
+export PKGDEST=$XDG_CACHE_HOME/arch_meta
+export SRCDEST=$XDG_CACHE_HOME/arch_meta
+mkdir -p $BUILDDIR
+makepkg --nodeps -si
+#sudo pacman -U $PKGDEST/meta-arch-0-${1}-any.pkg.tar.zst
